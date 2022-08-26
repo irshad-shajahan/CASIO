@@ -1,0 +1,15 @@
+(function($) {
+	window.addEventListener('load', function() {
+		$('dt[data-is-open-accordion]').each(function(idx, el) {
+			var isOpenAccordion = $(el).data('is-open-accordion');
+			var id = $(el).attr('id');
+			if (isOpenAccordion) {
+				$(el).removeClass('open');
+				$(el).parent().find('dd[aria-labelledby="' + id + '"]').css('display', 'none');
+			} else {
+				$(el).addClass('open');
+				$(el).parent().find('dd[aria-labelledby="' + id + '"]').css('display', 'block');
+			}
+		});
+	}, false);
+})(jQuery);

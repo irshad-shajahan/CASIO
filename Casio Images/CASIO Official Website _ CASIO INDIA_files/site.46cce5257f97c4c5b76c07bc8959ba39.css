@@ -1,0 +1,9 @@
+.switch-container:not(.is-edit-mode) {
+  display: none;
+}
+p.signed-in {
+  color: #177D1C;
+}
+p.unsigned-in {
+  color: #FF0000;
+}
